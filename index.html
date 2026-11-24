@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>صباح الخير</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fff9f3;--card:#fff;--ink:#2a2340;--soft:#7a6f8c;--rose:#e8557a;--gold:#f0b04a;--teal:#1aa3a1;--line:#f1e4dd;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16122b;--card:#201b3d;--ink:#f4eefc;--soft:#b5abcb;--rose:#ff86a5;--gold:#ffc766;--teal:#4fd1c9;--line:#322b57;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16122b;--card:#201b3d;--ink:#f4eefc;--soft:#b5abcb;--rose:#ff86a5;--gold:#ffc766;--teal:#4fd1c9;--line:#322b57;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal","Noto Sans Arabic","Geeza Pro",system-ui,sans-serif;font-size:18px;line-height:1.95}
+button,input{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.hero{position:relative;z-index:5;min-height:100svh;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;text-align:center;color:#fff;padding:24px 22px 64px;background:linear-gradient(to top,#ffd9ae 0%,#ffb0a4 26%,#c79ae6 56%,#5f72d8 100%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;z-index:2;background:radial-gradient(120% 75% at 18% 100%,#4a3a8c 0 52%,transparent 53%),radial-gradient(110% 62% at 88% 100%,#5d479d 0 48%,transparent 49%)}
+.sun{position:absolute;left:50%;bottom:-140px;width:260px;height:260px;margin-left:-130px;border-radius:50%;background:radial-gradient(circle,#fffbe6 0,#ffd36b 50%,rgba(255,211,107,0) 72%);animation:rise 5.5s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{from{transform:translateY(180px)}to{transform:translateY(-38vh)}}
+.moon{position:absolute;top:10%;right:15%;width:56px;height:56px;border-radius:50%;box-shadow:-14px 5px 0 0 #fff6d0;transform:rotate(-20deg);animation:fd 5s ease 1s forwards}
+@keyframes fd{to{opacity:0}}
+.cl{position:absolute;left:0;height:28px;border-radius:30px;background:rgba(255,255,255,.5);animation:dr linear infinite}
+.cl::before{content:"";position:absolute;top:-14px;right:24px;width:46px;height:36px;border-radius:50%;background:inherit}
+.c1{top:15%;width:110px;animation-duration:50s}.c2{top:27%;width:80px;animation-duration:38s;animation-delay:-14s}.c3{top:38%;width:130px;animation-duration:62s;animation-delay:-30s}
+@keyframes dr{from{transform:translateX(115vw)}to{transform:translateX(-160px)}}
+.ht{position:relative;z-index:3}
+.ht>*{opacity:0;animation:up 1.5s ease forwards}
+.k{margin:0;font-size:19px;animation-delay:2s!important}
+.ht h1{font-family:"Aref Ruqaa","Amiri",serif;font-weight:700;font-size:clamp(58px,19vw,92px);line-height:1.25;margin:0;text-shadow:0 3px 22px rgba(60,40,110,.4);animation-delay:2.5s!important}
+.s{font-family:"Amiri",serif;font-size:26px;margin:0 0 26px;animation-delay:3.2s!important}
+.go{border:0;border-radius:999px;background:#fff;color:#b8335c;padding:13px 38px;font-size:19px;font-weight:700;box-shadow:0 8px 26px rgba(60,40,110,.3);animation-delay:3.8s!important}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+main{max-width:560px;margin:0 auto;padding:30px 16px 110px}
+.hd{text-align:center;margin:0 0 26px}
+.hd .hl{font-family:"Aref Ruqaa","Amiri",serif;font-weight:700;font-size:36px;line-height:1.5;margin:0;color:var(--rose)}
+.hd p{margin:2px 0;color:var(--soft)}
+section{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px 22px;margin:0 0 18px;box-shadow:0 10px 34px rgba(80,50,90,.07)}
+h2{font-family:"Aref Ruqaa","Amiri",serif;font-weight:700;font-size:27px;line-height:1.5;color:var(--rose);margin:0 0 10px}
+.ar{font-family:"Amiri","Noto Naskh Arabic",serif}
+.v{font-size:25px;line-height:2.1;margin:4px 0}
+.ref{color:var(--soft);font-size:15px;margin:0}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.poem{text-align:center}
+.poem p{font-size:22px;line-height:2.1;margin:0 0 8px}
+.rose{display:block;margin:0 auto 6px;cursor:pointer;transform-origin:50% 100%;animation:bl 2.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes bl{from{transform:scale(.2) rotate(-8deg);opacity:0}to{transform:none;opacity:1}}
+.cnt{display:flex;align-items:baseline;gap:10px}
+.cnt b{font-family:"Aref Ruqaa",serif;font-size:58px;line-height:1.2;color:var(--teal)}
+.bar{height:7px;border-radius:7px;background:var(--line);overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;width:0;border-radius:7px;background:linear-gradient(90deg,var(--teal),var(--rose));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+input[type=date]{border:1.5px solid var(--line);background:var(--bg);border-radius:12px;padding:5px 10px}
+.chk{display:flex;gap:12px;align-items:center;margin-top:10px;cursor:pointer}
+.chk input{width:24px;height:24px;accent-color:var(--rose)}
+.ok{color:var(--rose);font-weight:700;min-height:1.9em;margin:4px 0 0}
+.qb{text-align:center;cursor:pointer;transition:opacity .35s;padding-top:20px;position:relative}
+.qb::before{content:"“";position:absolute;top:-8px;right:50%;margin-right:-26px;font-family:"Amiri",serif;font-size:96px;line-height:1;color:var(--rose);opacity:.2}
+.qb.o{opacity:0}
+.qt{font-size:25px;line-height:2.1;min-height:6.4em;display:flex;align-items:center;justify-content:center;margin:0 0 6px}
+.qa{color:var(--rose);font-weight:700;font-size:16px;margin:0}
+.dots{display:flex;gap:7px;justify-content:center;margin-top:12px}
+.dots i{width:7px;height:7px;border-radius:7px;background:var(--line);transition:all .4s}.dots i.on{width:24px;background:var(--rose)}
+.letter p{font-size:22px;line-height:2.1;margin:0 0 10px}
+.sig{color:var(--rose)}
+.btn{border:1.5px solid var(--rose);background:transparent;color:var(--rose);border-radius:999px;padding:6px 22px;font-weight:500}
+.btn:hover{background:var(--rose);color:#fff}
+.card{font-size:23px;line-height:2.1;min-height:4.4em;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 16px;margin:0 0 12px;border-radius:18px;background:color-mix(in srgb,var(--rose) 8%,transparent)}
+.pop{animation:pp .7s cubic-bezier(.2,.9,.3,1.3)}@keyframes pp{from{transform:scale(.93);opacity:.2}to{transform:none;opacity:1}}
+.end{text-align:center;font-size:23px;line-height:2.2;margin:28px 8px 8px}
+.tl{text-align:center}.tl button{border:0;background:none;color:var(--soft);text-decoration:underline;font-size:14px}
+.fab{position:fixed;z-index:40;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));border:0;border-radius:999px;padding:12px 28px;font-weight:700;font-size:17px;color:#fff;background:linear-gradient(135deg,#ff8a5c,var(--rose));box-shadow:0 10px 28px rgba(232,85,122,.45)}
+.ov{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:calc(24px + env(safe-area-inset-top,0px)) 28px calc(24px + env(safe-area-inset-bottom,0px));color:#fff;background:linear-gradient(160deg,#ff8a5c,#e8557a 55%,#6d4bd0)}
+.ov[hidden]{display:none}
+.ov p{font-family:"Aref Ruqaa","Amiri",serif;font-size:clamp(26px,7vw,36px);line-height:1.9;margin:0 0 30px;max-width:15em;animation:up 1s ease both}
+.ov button{border:0;border-radius:999px;background:#fff;color:#b8335c;padding:12px 38px;font-size:20px;font-weight:700}
+.ov .x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:16px;background:rgba(255,255,255,.25);color:#fff;padding:4px 14px}
+.pt{position:fixed;bottom:80px;font-size:28px;pointer-events:none;z-index:50;animation:fl 2.6s ease-out forwards}
+@keyframes fl{to{transform:translateY(-60vh) rotate(40deg);opacity:0}}
+body{background:radial-gradient(70% 40% at 8% 0%,rgba(255,154,170,.38),transparent 70%),radial-gradient(60% 40% at 100% 28%,rgba(120,200,255,.32),transparent 70%),radial-gradient(70% 40% at 15% 100%,rgba(255,215,120,.38),transparent 70%),var(--bg);background-attachment:fixed}
+.hd::before{content:"✦  ✧  ✦";display:block;color:var(--gold);font-size:20px}
+.hd .hl{background:linear-gradient(90deg,#e8557a,#ff8a3d 60%,#f0b04a);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:40px}
+section{position:relative;overflow:hidden;border:0;color:#fff;box-shadow:0 14px 36px rgba(60,30,90,.18)}
+section::after{content:"";position:absolute;top:-46px;left:-46px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.17);pointer-events:none}
+section h2{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.15)}
+section .ref{color:rgba(255,255,255,.82)}
+main section:nth-of-type(1){background:linear-gradient(135deg,#ff6f96,#ff9a63 55%,#ffc55a);background-size:200% 200%;animation:fw 14s ease infinite}
+@keyframes fw{50%{background-position:100% 50%}}
+.poem p{color:#fff;font-size:23px;text-shadow:0 1px 8px rgba(120,40,40,.25)}
+main section:nth-of-type(2){background:linear-gradient(135deg,#12b3ae,#3b86e6)}
+.cnt b{color:#fff}
+.bar{background:rgba(255,255,255,.28)}.bar i{background:#fff}
+input[type=date]{background:rgba(255,255,255,.92);color:#2a2340;border-color:transparent}
+main section:nth-of-type(3){background:linear-gradient(135deg,#5846d6,#9a6cf2)}
+main section:nth-of-type(3) .v{color:#ffe08a}
+.ok{color:#ffe08a}
+.chk input{accent-color:#ffd36b}
+main section:nth-of-type(4){background:linear-gradient(160deg,#1d1a4a,#4b2f93)}
+.qb{color:#ffd978}.qb::before{color:#ffd978;opacity:.3}.qa{color:#ff9fc4}
+.dots i{background:rgba(255,255,255,.3)}.dots i.on{background:#ffd978}
+main section:nth-of-type(5){background:linear-gradient(160deg,#fffaf0,#ffeedd);color:#3a2a3f}
+main section:nth-of-type(5)::after{background:rgba(255,160,120,.18)}
+main section:nth-of-type(5) h2{color:#d2406c;text-shadow:none}
+.letter p{color:#3a2a3f}.letter .sig{color:#c2336a}
+main section:nth-of-type(6){background:linear-gradient(135deg,#ff5f93,#ff3e7f)}
+main section:nth-of-type(7){background:linear-gradient(135deg,#ffb347,#ff7a5c)}
+.card{background:rgba(255,255,255,.2);color:#fff}
+main section:nth-of-type(n+6) .btn{border-color:#fff;color:#fff}
+main section:nth-of-type(n+6) .btn:hover{background:#fff;color:#d2406c}
+@media (prefers-reduced-motion:reduce){main section:nth-of-type(1){animation:none}.sun,.moon,.cl,.rose,.pt{animation:none}.sun{transform:translateY(-38vh)}.moon{opacity:0}.ht>*{opacity:1;animation:none!important}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="hero" id="hero">
+  <div class="moon"></div><div class="sun"></div><i class="cl c1"></i><i class="cl c2"></i><i class="cl c3"></i>
+  <div class="ht"><p class="k">فجرٌ جديد، وأملٌ جديد</p><h1>صباح الخير</h1><p class="s">يا نورَ يومي</p><button class="go" id="go">افتحي صباحكِ</button></div>
+</div>
+
+<main>
+  <div class="hd"><p class="hl" id="hello"></p><p id="date"></p><p id="dm"></p></div>
+
+  <section class="poem">
+    <svg id="rose" class="rose" viewBox="0 0 120 170" width="110" height="156" role="img" aria-label="وردة">
+      <path d="M60 86C56 115 64 140 60 168" stroke="#3aa55d" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="42" cy="128" rx="16" ry="7" fill="#4cbc6f" transform="rotate(-30 42 128)"/><ellipse cx="79" cy="142" rx="16" ry="7" fill="#4cbc6f" transform="rotate(30 79 142)"/>
+      <g fill="#f06a98"><ellipse cx="60" cy="42" rx="19" ry="26"/><ellipse cx="60" cy="42" rx="19" ry="26" transform="rotate(72 60 62)"/><ellipse cx="60" cy="42" rx="19" ry="26" transform="rotate(144 60 62)"/><ellipse cx="60" cy="42" rx="19" ry="26" transform="rotate(216 60 62)"/><ellipse cx="60" cy="42" rx="19" ry="26" transform="rotate(288 60 62)"/></g>
+      <circle cx="60" cy="62" r="20" fill="#ff8fb5"/><circle cx="60" cy="62" r="11" fill="#e8487f"/>
+    </svg>
+    <p class="ar">صباحُ الخير يا حبيبتي المثابرة، يا من تحوّلين السهرَ إلى جسور، والتعبَ إلى سلالمَ تصعدين بها نحو حلمكِ.</p>
+    <p class="ar">أنتِ كشجرةٍ أصلُها ثابتٌ وفرعُها في السماء؛ تُثقلها العواصف فتزداد جذورُها عمقاً، وكالفجر لا يستأذن الليل، بل يشقّ ظلامه بخيطٍ من نور.</p>
+    <p class="ar">كلُّ صفحةٍ تطوينها لَبِنةٌ في صرحكِ، وكلُّ ليلةٍ ساهرة بذرةٌ ستُزهر غداً معطفاً أبيض، ورحمةً في أيدي المرضى.</p>
+    <p class="ar">فانهضي هذا الصباح كما تنهض الشمس: بلا ضجيج، وبثقةٍ لا يوقفها غيم. وأنا ظلُّكِ الذي لا يغيب، ودعائي يسبقكِ إلى كل بابٍ تطرقينه.</p>
+    <p class="ar" style="color:var(--rose)">صباحكِ نور، يا مثابرتي الجميلة 🌹</p>
+  </section>
+
+  <section>
+    <h2>العدّ التنازلي لـ UEI1</h2>
+    <div class="cnt"><b id="days">—</b><span id="dl">اختاري تاريخ الامتحان</span></div>
+    <div class="bar"><i id="bi"></i></div>
+    <label for="exam" class="ref">موعد الامتحان: </label><input type="date" id="exam">
+  </section>
+
+  <section>
+    <h2>نسمةُ الفجر</h2>
+    <p class="v ar">«وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ»</p>
+    <p class="ref">سورة الطلاق</p>
+    <p class="ar" style="font-size:21px;margin:10px 0 0">قال ﷺ: «ركعتا الفجر خيرٌ من الدنيا وما فيها».</p>
+    <label class="chk"><input type="checkbox" id="fj"><span>صلّيتُ الفجر</span></label>
+    <p class="ok" id="fo"></p>
+  </section>
+
+  <section>
+    <h2>كلماتٌ من نور</h2>
+    <div class="qb ar" id="qb"><p class="qt" id="qt"></p><p class="qa" id="qa"></p></div>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <section class="letter">
+    <h2>رسالة إلى طبيبة الغد</h2>
+    <p class="ar">إلى التي تُسابق الفجر بقلمها،</p>
+    <p class="ar">اخترتِ طريقاً لا يسلكه إلا أصحاب القلوب الكبيرة: أن تكوني يداً تُخفّف الألم، وصوتاً يبعث الطمأنينة في قلبٍ خائف.</p>
+    <p class="ar">وهو طريقٌ لا تُعبّده الحماسة وحدها، بل صبرٌ هادئ، وسهرٌ لا يعرفه إلا الكتاب، وإيمانٌ بأن كل صفحةٍ تطوينها اليوم ستصير غداً رحمةً بمريض.</p>
+    <p class="ar">وإن تعثّرتِ في يوم، فليس ذلك فشلاً، بل جزءٌ من الطريق. قومي وأكملي وتوكّلي على الله، فمن سعى لم يضع سعيُه.</p>
+    <p class="ar">وUEI1 محطّةٌ في رحلتكِ، لا نهايتها، فادخليها بقلبٍ ثابتٍ وابتسامة.</p>
+    <p class="ar sig">— مَن يؤمن بكِ دائماً</p>
+  </section>
+
+  <section>
+    <h2>لماذا أحبكِ</h2>
+    <p class="card ar" id="rs">اضغطي واكشفي أول سبب…</p>
+    <button class="btn" id="nr">اكشفي سبباً</button>
+  </section>
+
+  <section>
+    <h2>جرعةُ سعادةٍ لمثابرتي</h2>
+    <p class="card ar" id="ds">لحظةُ فرحٍ صغيرة، اضغطي.</p>
+    <button class="btn" id="nd">أعطيني جرعة</button>
+  </section>
+
+  <p class="end ar">مهما كانت النتيجة، فأنا فخورٌ بكِ دائماً.<br>وراكي قدّها، بإذن الله.</p>
+  <p class="tl"><button id="rn">تغيير الاسم</button></p>
+</main>
+
+<button class="fab" id="fab">🔥 اشحني قوتكِ</button>
+<div class="ov" id="ov" hidden><button class="x" id="ox" aria-label="إغلاق">✕</button><p id="ot"></p><button id="on">التالي</button></div>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+var name=ls('name')||'حبيبتي المثابرة';
+var dm=['بداية أسبوعٍ جديد، وربي يفتح لكِ كل الأبواب.','اثنين هادئ، وبشوية بشوية توصلين.','ثلاثاء جميل، وكل يوم يقرّبكِ من حلمكِ.','منتصف الأسبوع، وراكي أقوى مما تظنين.','خميس مبارك، كمّلي بخفة والراحة قريبة.','جمعة مباركة، ولا تنسي دعاءً في ساعة الإجابة.','سبتٌ لطيف، خذي من الراحة نصيبها.'];
+function greet(){var h=new Date().getHours();$('hello').textContent=(h<12?'صباح الخير':h<17?'يومٌ موفّق':'مساء الخير')+' يا '+name;try{$('date').textContent=new Date().toLocaleDateString('ar',{weekday:'long',day:'numeric',month:'long'})}catch(e){}$('dm').textContent=dm[new Date().getDay()]}
+
+function cd(){var v=$('exam').value,b=$('bi');if(!v){$('days').textContent='—';$('dl').textContent='اختاري تاريخ الامتحان';b.style.width='0%';return}
+var d=Math.round((new Date(v+'T00:00:00')-new Date().setHours(0,0,0,0))/86400000);
+if(d>1){$('days').textContent=d;$('dl').textContent='يوماً على الامتحان، وكل يوم فرصة'}
+else if(d===1){$('days').textContent='١';$('dl').textContent='غداً امتحانكِ، ثقي بما ذاكرتِ'}
+else if(d===0){$('days').textContent='اليوم';$('dl').textContent='بسم الله، أنتِ جاهزة'}
+else{$('days').textContent='✓';$('dl').textContent='انتهى الامتحان، بإذن الله بنجاح'}
+b.style.width=Math.max(4,Math.min(100,(1-d/60)*100))+'%'}
+var ex=ls('exam');if(ex)$('exam').value=ex;
+$('exam').addEventListener('change',function(){ls('exam',$('exam').value);cd()});
+$('fj').addEventListener('change',function(){$('fo').textContent=this.checked?'تقبّل الله منكِ، يومٌ مبارك بإذن الله':''});
+
+function pet(a){for(var k=0;k<8;k++){var p=document.createElement('span');p.className='pt';p.textContent=a[k%a.length];p.style.left=(12+Math.random()*76)+'%';p.style.animationDelay=(k*.12)+'s';document.body.appendChild(p);setTimeout(function(x){x.remove()}.bind(null,p),3400)}}
+$('rose').addEventListener('click',function(){var r=$('rose');r.style.animation='none';void r.getBoundingClientRect();r.style.animation='';pet(['🌹','🌸','🌷'])});
+
+var Q=[['عَلى قَدرِ أَهلِ العَزمِ تَأتي العَزائِمُ وَتَأتي عَلى قَدرِ الكِرامِ المَكارِمُ','المتنبي'],['إذا غامرتَ في شرفٍ مرومِ فلا تقنعْ بما دونَ النجومِ','المتنبي'],['ومن لا يحبُّ صعودَ الجبالِ يعشْ أبدَ الدهرِ بينَ الحفرِ','أبو القاسم الشابي'],['وَاصْبِرْ فَإِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ','سورة هود'],['وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَى','سورة الضحى'],['الحياةُ قصيرة، وصناعةُ الطبِّ طويلة','أبقراط'],['يا طبيبةَ الغد: العلمُ يُرفع بالصبر، والقلوبُ تُشفى باللطف، وأنتِ تملكين الاثنين','إليكِ']],qi=0,qm=null,dt=$('dots');
+Q.forEach(function(){dt.appendChild(document.createElement('i'))});
+function sq(i){qi=(i+Q.length)%Q.length;$('qt').textContent=Q[qi][0];$('qa').textContent=Q[qi][1];[].forEach.call(dt.children,function(d,k){d.classList.toggle('on',k===qi)})}
+function nq(i){var b=$('qb');b.classList.add('o');setTimeout(function(){sq(i);b.classList.remove('o')},350)}
+function aq(){clearInterval(qm);qm=setInterval(function(){nq(qi+1)},9000)}
+$('qb').addEventListener('click',function(){nq(qi+1);aq()});sq(0);aq();
+
+var R=['لأنني أرتاح لكِ قبل كل شيء، فمعكِ يهدأ قلبي وتسكن روحي.','لأن في عينيكِ وطناً أرجع إليه كلما تعبت.','لأن عينيكِ تقولان ما تعجز عنه الكلمات.','لأن ضحكتكِ تُهدّئ كل شيء في هذا العالم.','لأن صوتكِ في الصباح أجمل ما أسمعه.','لأنكِ تجتهدين بصمتٍ دون أن تشتكي.','لأن قلبكِ يحنو على المتعبين قبل أن تصيري طبيبة.','لأنكِ سندي حين أضعف، وأنا سندكِ دائماً.','لأن حضوركِ وحده يكفي ليصير يومي أجمل.','لأنكِ حقيقية، بطيبتكِ وعنادكِ وكل ما فيكِ.'],ri=0;
+function pp(el){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop')}
+$('nr').addEventListener('click',function(){$('rs').textContent=ri<R.length?R[ri]:'وهناك ألف سببٍ آخر لا يسعه هذا المكان.';pp($('rs'));$('nr').textContent=ri<R.length-1?'سبب آخر':'وماذا أيضاً؟';ri=ri<R.length?ri+1:0});
+
+var D=['أنتِ لا تذاكرين فقط يا مثابرتي، أنتِ تنحتين مستقبلكِ بإزميلٍ من صبر؛ وكل ضربةٍ صغيرة تُقرّبكِ من التمثال الذي تحلمين به.','كالبذرة تحت التراب: لا يراكِ أحدٌ وأنتِ تنمين، لكنّ الأرض كلها ستعرفكِ حين تُزهرين.','تعبكِ ليس خسارة، إنه الوقود الذي يُشعل مصباحكِ حين يشتدّ الظلام على غيركِ.','أنتِ سفينةٌ لا تخاف الموج، لأنها تعلم أن البحر الهادئ لا يصنع رُبّاناً.','أغمضي عينيكِ وتخيّلي صباح تخرّجكِ: المعطفُ الأبيض كجناحَي حمامة، ومن تحبّينهم يبتسمون فخراً، وأنا أراكِ من بعيدٍ وقلبي يصفّق.','يومكِ قصيدةٌ تكتبينها بالمثابرة؛ فاجعلي سطرَ اليوم أجملَ من سطرِ الأمس.','الجبال لا تُهزم يا حبيبتي، لكنها تُصعَد خطوةً خطوة، وأنتِ صاعدة.','ضعي يدكِ على قلبكِ؛ هذا المحرّك الصغير يضخّ حلماً كبيراً، فكيف لا يصل؟'],D0=['أغمضي عينيكِ ثلاث ثوانٍ، وتخيّلي يوم تخرّجكِ بمعطفكِ الأبيض… ثم ابتسمي.','ضعي يدكِ على قلبكِ؛ هذا الذي يخفق بحلمٍ كبير، افخري به.','تنفّسي بعمق وقولي في سرّكِ: الحمد لله على كل ما أنا فيه.','تذكّري أن هناك من يدعو لكِ الآن في الغيب، وأنا منهم.','ما تتعلّمينه اليوم سيصير يوماً أماناً لمريضٍ لا تعرفينه بعد.','كافئي نفسكِ بشيءٍ تحبّينه اليوم؛ فمن يتعب يستحق ذلك.'],di=Math.floor(Math.random()*D.length);
+$('nd').addEventListener('click',function(){$('ds').textContent=D[di++%D.length];pp($('ds'));pet(['🤍','🌸'])});
+
+var L=['أنتِ لستِ هنا بالصدفة. هذا مكانكِ، وهذا حلمكِ، وأنتِ تستحقينه.','كل سهرةٍ تعبتِ فيها، وكل صفحة، وكل دمعة… لم تضع. كلها تشهد لكِ.','الخوف لا يوقف الأبطال، بل يمشون معه ويكملون.','قفي. تنفّسي. ارفعي رأسكِ. راكي قدّها.','ما كُتب لكِ سيصلكِ، وعليكِ السعي بقلبٍ مطمئن.','بسم الله، توكّلتُ على الله، ولا حول ولا قوة إلا بالله.','اذهبي الآن، وأريهم من تكونين.'],li=0;
+function sl(){$('ot').textContent=L[li];var p=$('ot');p.style.animation='none';void p.offsetWidth;p.style.animation='';$('on').textContent=li<L.length-1?'التالي':'أنا جاهزة'}
+$('fab').addEventListener('click',function(){li=0;sl();$('ov').hidden=false});
+$('on').addEventListener('click',function(){if(li<L.length-1){li++;sl()}else{$('ov').hidden=true;pet(['🌹','🤍','🌸'])}});
+$('ox').addEventListener('click',function(){$('ov').hidden=true});
+
+$('rn').addEventListener('click',function(){var n=prompt('اكتبي الاسم الذي يظهر في التحية:',name);if(n&&n.trim()){name=n.trim();ls('name',name);greet()}});
+$('go').addEventListener('click',function(){$('hero').style.display='none';window.scrollTo(0,0)});
+
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});document.querySelectorAll('main section').forEach(function(s){s.classList.add('rv');io.observe(s)})}
+greet();cd();
+})();
+</script>
+</body>
+</html>
